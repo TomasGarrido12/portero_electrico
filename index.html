@@ -3,7 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="practica.js"></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body onload="init();">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col border" style="background-color: #eee">
+            <h2>Portero Electrico</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="visorPiso_visorDpto">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 m-1 pr-2 border">
+            <span id="piso"></span>
+          </div>
+          <div class="col-sm-5 m-1 pl-2 border">
+            <span id="dpto"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="botones">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 border"><button id="uno">1</button></div>
+          <div class="col-sm-4 border"><button id="dos">2</button></div>
+          <div class="col-sm-4 border"><button id="tres">3</button></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 border"><button id="cuatro">4</button></div>
+          <div class="col-sm-4 border"><button id="cinco">5</button></div>
+          <div class="col-sm-4 border"><button id="seis">6</button></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 border"><button id="siete">7</button></div>
+          <div class="col-sm-4 border"><button id="ocho">8</button></div>
+          <div class="col-sm-4 border"><button id="nueve">9</button></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 border"><button id="cero">0</button></div>
+          <div class="col-sm-4 border"><button id="llamar">Llamar</button></div>
+          <div class="col-sm-4 border"><button id="borrar">Borrar</button></div>
+        </div>
+      </div>
+    </section>
+    <section id="visor">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 border">
+            <span id="quePisoEs">Estas llamando al piso NN, dpto NN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
