@@ -1,52 +1,56 @@
-function init() {
-  var piso = document.getElementById("piso");
-  var cero = document.getElementById("cero");
-  var uno = document.getElementById("uno");
-  var dos = document.getElementById("dos");
-  var tres = document.getElementById("tres");
-  var cuatro = document.getElementById("cuatro");
-  var cinco = document.getElementById("cinco");
-  var seis = document.getElementById("seis");
-  var siete = document.getElementById("siete");
-  var ocho = document.getElementById("ocho");
-  var nueve = document.getElementById("nueve");
-  var borrar = document.getElementById("borrar");
+var piso;
+var pisoIngresado;
+var departamento;
+var departamentoIngresado;
 
-  uno.onclick = function (e) {
-    piso.textContent = piso.textContent + "1";
-  };
-  dos.onclick = function (e) {
-    piso.textContent = piso.textContent + "2";
-  };
-  tres.onclick = function (e) {
-    piso.textContent = piso.textContent + "3";
-  };
-  cuatro.onclick = function (e) {
-    piso.textContent = piso.textContent + "4";
-  };
-  cinco.onclick = function (e) {
-    piso.textContent = piso.textContent + "5";
-  };
-  seis.onclick = function (e) {
-    piso.textContent = piso.textContent + "6";
-  };
-  siete.onclick = function (e) {
-    piso.textContent = piso.textContent + "7";
-  };
-  ocho.onclick = function (e) {
-    piso.textContent = piso.textContent + "8";
-  };
-  nueve.onclick = function (e) {
-    piso.textContent = piso.textContent + "9";
-  };
-  cero.onclick = function (e) {
-    piso.textContent = piso.textContent + "0";
-  };
-  borrar.onclick = function (e) {
-    resetear();
-  };
+function init() {
+  
+  piso = document.getElementById("piso");
+  departamento = document.getElementById("dpto");
+  pisoIngresado = new Array();
 }
 
-function resetear() {
+function tomarDigito(digito){
+  
+  if(pisoIngresado.length == 0){
+    pisoIngresado.push(digito);;
+    piso.textContent = digito;
+  }
+  else{
+    if(pisoIngresado.length == 1){
+      pisoIngresado.push(digito);;
+      piso.textContent = getPisoIngresado();
+      verificarQueElPisoIngresadoSeaValido();
+    }
+    else{
+      departamentoIngresado = digito;
+      departamento.textContent = digito;
+    }
+  }
+}
+
+function verificarQueElPisoIngresadoSeaValido(){
+if(! esValidoElPisoIngresado()){
+  piso.textContent = "El piso ingresado ".concat(getPisoIngresado(), " no es valido");
+}
+}
+
+function esValidoElPisoIngresado(){
+return getPisoIngresado() <= 48; 
+}
+
+function getPisoIngresado(){
+return pisoIngresado[0] * 10 + pisoIngresado[1];
+}
+
+function borrar(){
   piso.textContent = "";
+  departamento.textContent = "";
+  pisoIngresado = [];
+  document.getElementById("quePisoEs").textContent = "";
+  departamentoIngresado = null;
+}
+
+function llamar(){
+  document.getElementById("quePisoEs").textContent = "Llamando al piso " + getPisoIngresado() + ", dpto " + departamentoIngresado;
 }

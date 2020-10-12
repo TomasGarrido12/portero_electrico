@@ -52,24 +52,24 @@
     <section id="botones">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4 border"><button id="uno">1</button></div>
-          <div class="col-sm-4 border"><button id="dos">2</button></div>
-          <div class="col-sm-4 border"><button id="tres">3</button></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="1" value=1 onclick="tomarDigito(1)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="2" value=2 onclick="tomarDigito(2)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="3" value=3 onclick="tomarDigito(3)"></div>
         </div>
         <div class="row">
-          <div class="col-sm-4 border"><button id="cuatro">4</button></div>
-          <div class="col-sm-4 border"><button id="cinco">5</button></div>
-          <div class="col-sm-4 border"><button id="seis">6</button></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="4" value=4 onclick="tomarDigito(4)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="5" value=5 onclick="tomarDigito(5)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="6" value=6 onclick="tomarDigito(6)"></div>
         </div>
         <div class="row">
-          <div class="col-sm-4 border"><button id="siete">7</button></div>
-          <div class="col-sm-4 border"><button id="ocho">8</button></div>
-          <div class="col-sm-4 border"><button id="nueve">9</button></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="7" value=7 onclick="tomarDigito(7)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="8" value=8 onclick="tomarDigito(8)"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="9" value=9 onclick="tomarDigito(9)"></div>
         </div>
         <div class="row">
-          <div class="col-sm-4 border"><button id="cero">0</button></div>
-          <div class="col-sm-4 border"><button id="llamar">Llamar</button></div>
-          <div class="col-sm-4 border"><button id="borrar">Borrar</button></div>
+          <div class="col-sm-4 border"><input type="button" id="Llamar" value="Llamar" onclick="llamar()"></div>
+          <div class="col-sm-4 border"><input type="button" class="boton"  id="0" value=0 onclick="tomarDigito(0)"></div>
+          <div class="col-sm-4 border"><input type="button" id="borrar" value="Borrar" onclick="borrar()"></div>
         </div>
       </div>
     </section>
@@ -77,7 +77,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 border">
-            <span id="quePisoEs">Estas llamando al piso NN, dpto NN</span>
+            <span id="quePisoEs"></span>
           </div>
         </div>
       </div>
