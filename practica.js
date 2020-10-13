@@ -27,7 +27,9 @@ function tomarDigito(digito) {
 
 function verificarQueElPisoIngresadoSeaValido() {
   if (!esValidoElPisoIngresado()) {
-    piso.textContent = "El piso ingresado ".concat(
+    document.getElementById(
+      "quePisoEs"
+    ).textContent = "El piso ingresado ".concat(
       getPisoIngresado(),
       " no es valido"
     );
